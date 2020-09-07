@@ -1,0 +1,11 @@
+﻿<h1>Hi {{currentUser.firstName}}!</h1>
+<p>You're logged in with Inventory System!!</p>
+<h3>All Products :</h3>
+<ul>
+    <li *ngFor="let product of products">
+        (Product Name : {{product.name}} Product ID: {{product.id}}) User : {{product.addedBy}} 
+        - <a (click)="deleteProduct(product.id)" class="text-danger">Delete</a>
+        - <a (click)="addProduct()" class="text-danger">Add</a>
+    </li>
+</ul>
+<p><a [routerLink]="['/login']">Logout</a></p>
